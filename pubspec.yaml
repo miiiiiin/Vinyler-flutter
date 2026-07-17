@@ -1,0 +1,44 @@
+name: vinyler
+description: "Vinyler — LP 바코드 스캐너 앱 (Flutter · Frost 디자인 시스템). iOS/Android."
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # 아이콘 — Phosphor만 사용 (직접 그리지 말 것)
+  phosphor_flutter: ^2.1.0
+
+  # 타이포 — Inter(헤딩). 본문 Pretendard는 assets/fonts로 번들 (아래 fonts: 참고)
+  google_fonts: ^6.2.1
+
+  # 앨범 아트 (Discogs 이미지 URL)
+  cached_network_image: ^3.4.1
+
+  # ── 통합 시 활성화 ──
+  # mobile_scanner: ^5.2.3         # 바코드 스캔 (iOS Info.plist 카메라 권한)
+  # dio: ^5.7.0                    # API
+  # retrofit: ^4.4.1
+  # flutter_secure_storage: ^9.2.2 # JWT refresh 토큰
+
+dev_dependencies:
+  flutter_lints: ^4.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  # 한글 Pretendard 번들: assets/fonts/에 .otf를 넣고 아래 주석 해제
+  # fonts:
+  #   - family: Pretendard
+  #     fonts:
+  #       - asset: assets/fonts/Pretendard-Regular.otf
+  #       - asset: assets/fonts/Pretendard-Medium.otf
+  #         weight: 500
+  #       - asset: assets/fonts/Pretendard-SemiBold.otf
+  #         weight: 600
